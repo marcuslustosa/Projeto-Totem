@@ -1,0 +1,465 @@
+/* Estilo geral */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo do mapa */
+#map {
+  height: 500px;
+  width: 100%;
+  display: none; /* Oculta o mapa na página inicial */
+}
+
+/* Estilo da lightbox */
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+#lightbox iframe {
+  width: 80%;
+  height: 80%;
+  border: none;
+}
+
+/* Estilo do botão de voltar na lightbox */
+#lightbox button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #009da5; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Rubik', sans-serif; /* Fonte Rubik */
+  z-index: 1000;
+}
+
+#lightbox button:hover {
+  background-color: #007a7d; /* Cor de fundo no hover */
+}
+
+/* Estilo do header e navegação */
+header {
+  background: #f8f8f8;
+  padding: 10px 0;
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #009da5;
+  font-size: 18px;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo das seções de produtos */
+.product-section {
+  text-align: center;
+  margin: 10px;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ajusta o tamanho das imagens específicas */
+.product-section img {
+  max-width: 335px; /* Largura máxima para as imagens */
+  max-height: 120px; /* Altura máxima para as imagens */
+  width: auto; /* Ajusta a largura automaticamente */
+  height: auto; /* Ajusta a altura automaticamente */
+  object-fit: contain; /* Mantém a imagem completa dentro das dimensões especificadas */
+  margin-bottom: 5px; /* Espaçamento inferior para a imagem */
+}
+
+/* Ajusta o tamanho dos botões */
+.product-section button {
+  display: block;
+  width: 200px; /* Largura fixa para os botões */
+  margin: 10px auto; /* Centraliza o botão horizontalmente */
+  background-color: #009da5; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto */
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Rubik', sans-serif; /* Fonte Rubik */
+}
+
+.product-section button:hover {
+  background-color: #007a7d; /* Cor de fundo no hover */
+}
+
+/* Layout Grid para três linhas de três seções */
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Três colunas iguais */
+  grid-template-rows: repeat(2, auto); /* Duas linhas automáticas */
+  gap: 20px; /* Espaçamento entre as seções */
+  padding: 20px;
+}
+
+/* Coloca as seções na grade */
+#infinity {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+}
+
+#classic {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+}
+
+#w23 {
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 1;
+}
+
+#five {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+}
+
+#astec {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+}
+
+#exportacao {
+  grid-column: 3 / span 1;
+  grid-row: 2 / span 1;
+}
+
+/* Ajusta o tamanho das imagens específicas */
+.product-section img {
+  max-width: 335px; /* Largura máxima para as imagens */
+  max-height: 120px; /* Altura máxima para as imagens */
+  width: auto; /* Ajusta a largura automaticamente */
+  height: auto; /* Ajusta a altura automaticamente */
+  object-fit: contain; /* Mantém a imagem completa dentro das dimensões especificadas */
+  margin-bottom: 5px; /* Espaçamento inferior para a imagem */
+}
+
+/* Centraliza apenas as imagens das seções W23, Exportação e Classic */
+#classic img, 
+#w23 img, 
+#exportacao img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px; /* Espaçamento inferior ajustado */
+}
+
+/* Estilo do visualizador de PDF */
+#pdf-viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+#pdf-canvas {
+  width: 80%;
+  height: 80%;
+  border: none;
+}
+
+#pdf-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: 'Rubik', sans-serif;
+}
+
+#pdf-controls button {
+  background-color: #009da5;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 0 5px;
+  font-family: 'Rubik', sans-serif; /* Fonte Rubik */
+}
+
+#pdf-controls button:hover {
+  background-color: #007a7d;
+}
+
+/* Estilo para o botão de fechar personalizado do Fancybox */
+.fancybox-button--close {
+  background-color: #009DA5; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Rubik', sans-serif; /* Fonte Rubik */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase; /* Maiúsculas */
+}
+
+.fancybox-button--close svg {
+  display: none; /* Esconde o ícone SVG padrão */
+}
+
+.fancybox-button--close:hover {
+  background-color: #007A7D; /* Cor de fundo no hover */
+}
+
+
+/* Ajusta o tamanho das imagens específicas */
+.product-section img {
+  max-width: 335px; /* Largura máxima para as imagens */
+  min-height: 100px; /* Altura mínima para as imagens */
+  width: auto; /* Ajusta a largura automaticamente */
+  height: auto; /* Ajusta a altura automaticamente */
+  object-fit: contain; /* Mantém a imagem completa dentro das dimensões especificadas */
+  margin-bottom: 5px; /* Espaçamento inferior para a imagem */
+}
+/* Estilo do botão de fechar personalizado do Fancybox */
+.fancybox-button--close {
+  background-color: #009da5; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Rubik', sans-serif; /* Fonte Rubik */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase; /* Maiúsculas */
+}
+
+.fancybox-button--close svg {
+  display: none; /* Esconde o ícone SVG padrão */
+}
+
+.fancybox-button--close::before {
+  content: 'Voltar'; /* Texto do botão */
+}
+
+.fancybox-button--close:hover {
+  background-color: #007a7d; /* Cor de fundo no hover */
+}
+
+/* Estilo do botão de fechar personalizado do Fancybox */
+.fancybox-button--close {
+  position: absolute;
+  top: 20px; /* Distância do topo */
+  right: calc(20px + 30px); /* Move o botão 30px para a esquerda a partir da borda direita */
+  background-color: #009da5; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto */
+  padding: 10px 20px; /* Ajusta o padding para cobrir o texto */
+  border: none;
+  border-radius: 5px; /* Bordas arredondadas */
+  font-size: 16px; /* Tamanho da fonte */
+  font-family: 'Rubik', sans-serif; /* Fonte Rubik */
+  display: flex; /* Para centralizar o texto verticalmente */
+  align-items: center; /* Alinhamento vertical do texto */
+  justify-content: center; /* Alinhamento horizontal do texto */
+  text-align: center; /* Alinha o texto ao centro */
+  width: auto; /* Ajusta a largura automaticamente para o conteúdo */
+  height: auto; /* Ajusta a altura automaticamente para o conteúdo */
+  min-width: 100px; /* Largura mínima para garantir que o botão seja visível */
+  z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+}
+
+.fancybox-button--close svg {
+  display: none; /* Esconde o SVG padrão do botão de fechar */
+}
+
+/* Estilo do header e navegação */
+header {
+  background: #009da5; /* Cor de fundo do cabeçalho */
+  padding: 5px 0; /* Reduz o padding para diminuir o tamanho do bloco */
+  text-align: center;
+  color: #fff; /* Cor do texto */
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff; /* Cor do texto dos links */
+  font-size: 18px;
+  font-family: 'Rubik', sans-serif; /* Fonte Rubik */
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+
+/* Estilo do header e navegação */
+header {
+  background: #009da5; /* Cor de fundo do cabeçalho */
+  padding: 5px 0; /* Reduz o padding para diminuir o tamanho do bloco */
+  text-align: center;
+  color: #fff; /* Cor do texto */
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff; /* Cor do texto dos links */
+  font-size: 18px;
+  font-family: 'Rubik', sans-serif; /* Fonte Rubik */
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+/* Estilo do header e navegação */
+header {
+  background: #009da5; /* Cor de fundo do cabeçalho */
+  padding: 5px 0; /* Reduz o padding para diminuir o tamanho do bloco */
+  text-align: center;
+  color: #fff; /* Cor do texto */
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff; /* Cor do texto dos links */
+  font-size: 18px;
+  font-family: 'Rubik', sans-serif; /* Fonte Rubik */
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+/* Define o tamanho exato do logo */
+#logo {
+  width: 400px; /* Largura fixa */
+  height: 250px; /* Altura fixa */
+  object-fit: contain; /* Mantém a proporção da imagem sem cortá-la */
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            background: #fff;
+            padding: 10px 0;
+            text-align: center;
+            margin: 20px 20px; /* Margem em cima e embaixo */
+            position: relative; /* Necessário para posicionar os pseudo-elementos */
+        }
+
+        header::before,
+        header::after {
+            content: "";
+            position: absolute;
+            width: 50%; /* Metade do container */
+            height: 2px; /* Espessura do traço */
+            background: #009da5;
+        }
+
+        header::before {
+            top: 0;
+            left: 0;
+            border-top: 2px solid #009da5; /* Traço em cima, da esquerda para a direita */
+        }
+
+        header::after {
+            bottom: 0;
+            right: 0;
+            border-bottom: 2px solid #009da5; /* Traço em baixo, da direita para a esquerda */
+            transform: scaleX(-1); /* Inverte o traço para começar da direita */
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Conteúdo do cabeçalho -->
+        <h1>Bem-vindo ao Meu Site</h1>
+    </header>
+    <!-- O resto do conteúdo da página -->
+</body>
+</html>

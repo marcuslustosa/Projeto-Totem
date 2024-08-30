@@ -1,0 +1,6 @@
+[user]
+	name = gustavo.karman
+	email = gustavo.karman@metalife.com.br
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Exportação</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        body {
+            font-family: 'Rubik', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #009da5;
+            padding: 10px 20px;
+            color: #fff;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        #logo {
+            height: 50px;
+        }
+
+        #back-button {
+            position: fixed;
+            bottom: 50px;
+            right: 40px;
+            background-color: #009da5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 17.5px 17.5px;
+            cursor: pointer;
+            font-size: 15px;
+            font-family: 'Rubik', sans-serif;
+        }
+
+        #back-button:hover {
+            background-color: #007a7d;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .export-img {
+            max-width: 300px;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+        }
+
+        #map {
+            width: 100%;
+            height: 500px;
+            max-width: 1200px;
+            margin-bottom: 20px;
+        }
+
+        .info-text {
+            text-align: center;
+            font-size: 33px;
+            font-weight: bold;
+            color: #009da5;
+            margin: 20px 0;
+        }
+
+        .description {
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+            margin-top: 20px;
+            max-width: 800px;
+        }
+
+        .back-to-map-button {
+            display: none;
+            background-color: #009da5;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            position: fixed;
+            bottom: 30px;
+            left: 20px;
+            z-index: 1000;
+        }
+
+        .back-to-map-button:hover {
+            background-color: #007a7d;
+        }
+
+        .countries-img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Logo da Empresa" id="logo">
+    </header>
+
+    <button id="back-button" onclick="window.location.href='index.html'">Voltar</button>
+    <button class="back-to-map-button" onclick="showCountriesImage()">Voltar para o Mapa</button>
+
+    <div class="content">
+        <img src="images/exportacao.png" alt="Selo de Exportação" class="export-img">
+
+        <!-- Mapa Leaflet -->
+        <div id="map"></div>
+
+        <div class="info-text">
+            Presente em mais de 30 países
+        </div>
+
+        <img src="images/países.png" alt="Mapa de Países" class="countries-img">
+
+        <div class="description">
+            A MetaLife está sempre atenta às tendências e demandas do mercado global do Pilates. Ao expandir sua atuação para além das fronteiras brasileiras, a MetaLife se compromete a oferecer a mesma excelência em serviços e produtos que a tornaram referência no cenário nacional.<br>
+            Nosso objetivo é não apenas acompanhar, mas também contribuir para o avanço e aprimoramento da prática do Pilates em diversos países, promovendo bem-estar e qualidade de vida em escala internacional.
+        </div>
+    </div>
+
+    <!-- Scripts Leaflet -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Inicializa o mapa centrado no mundo
+        var map = L.map('map').setView([0, 0], 2);
+
+        // Adiciona o tile layer com a cor do mar verde
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+
+        // Array de países com coordenadas e informações de contato
+        var countries = [
+            { name: "Uruguai", lat: -32.5228, lng: -55.7658, info: "Vivo Pilates<br>Valentina<br>+598 98 678 834<br>info@vivopilates.com.uy" },
+            { name: "Paraguai", lat: -23.4425, lng: -58.4438, info: "Innove Pilates<br>Fabio Dos Santos<br>+595973696765<br>contato@innovesaude.com.br" },
+            { name: "Chile", lat: -35.6751, lng: -71.5430, info: "SD Med<br>Informaciones: +569 867 309 48<br>contacto@sdmed.cl" },
+            { name: "Itália", lat: 41.8719, lng: 12.5674, info: "TRANSATLANTIC FITNESS ITALIA S.R.L.<br>Marco Comiotto<br>+393478202879<br>mcomiotto@smartfitnessitalia.it" },
+            { name: "México", lat: 23.6345, lng: -102.5528, info: "Breathe Pilates<br>Rodolfo Vera Aguiar<br>+52 229 968 6652<br>metalife.mexico@gmail.com" },
+            { name: "Portugal", lat: 39.3999, lng: -8.2245, info: "Sublime Care<br>Felipe<br>+351 912 408 577<br>metalifeportugal@gmail.com" },
+            { name: "Colômbia", lat: 4.5709, lng: -74.2973 },
+            { name: "Bolívia", lat: -16.2902, lng: -63.5887 },
+            { name: "Peru", lat: -9.189967, lng: -75.015152 },
+            { name: "Venezuela", lat: 6.42375, lng: -66.58973 },
+            { name: "Equador", lat: -1.831239, lng: -78.183406 },
+            { name: "EUA", lat: 37.0902, lng: -95.7129 },
+            { name: "Canadá", lat: 56.1304, lng: -106.3468 },
+            { name: "Costa Rica", lat: 9.748917, lng: -83.753428 },
+            { name: "Argentina", lat: -38.4161, lng: -63.6167 },
+            { name: "Espanha", lat: 40.463667, lng: -3.74922 },
+            { name: "Inglaterra", lat: 51.509865, lng: -0.118092 },
+            { name: "França", lat: 46.603354, lng: 1.888334 },
+            { name: "Alemanha", lat: 51.165691, lng: 10.451526 },
+            { name: "Holanda", lat: 52.132633, lng: 5.291266 },
+            { name: "Panamá", lat: 8.537981, lng: -80.782127 },
+            { name: "Líbano", lat: 33.854721, lng: 35.862285 },
+            { name: "Israel", lat: 31.046051, lng: 34.851612 },
+            { name: "Catar", lat: 25.354826, lng: 51.183884 },
+            { name: "Angola", lat: -11.202692, lng: 17.873887 },
+            { name: "África do Sul", lat: -30.559482, lng: 22.937506 },
+            { name: "Austrália", lat: -25.274398, lng: 133.775136 },
+            { name: "Nova Zelândia", lat: -40.900557, lng: 174.885971 }
+        ];
+
+        
+
+        // Função para adicionar marcadores ao mapa
+        countries.forEach(function(country) {
+            var marker = L.marker([country.lat, country.lng]).addTo(map);
+            if (country.info) {
+                marker.bindPopup("<b>" + country.name + "</b><br>" + country.info);
+            } else {
+                marker.bindPopup("<b>" + country.name + "</b><br>Em breve mais informações.");
+            }
+        });
+
+        // Função para exibir a imagem de países
+        function showCountriesImage() {
+            document.getElementById("map").style.display = "none";
+            document.querySelector(".countries-img").style.display = "block";
+            document.querySelector(".back-to-map-button").style.display = "block";
+        }
+
+        // Função para voltar ao mapa
+        function showMap() {
+            document.getElementById("map").style.display = "block";
+            document.querySelector(".countries-img").style.display = "none";
+            document.querySelector(".back-to-map-button").style.display = "none";
+        }
+
+        document.querySelector(".countries-img").style.display = "none";
+        document.querySelector(".back-to-map-button").addEventListener("click", showMap);
+    </script>
+</body>
+</html>

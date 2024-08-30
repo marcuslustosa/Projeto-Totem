@@ -1,0 +1,44 @@
+{
+  "version": "tough-cookie@4.0.0",
+  "storeType": "MemoryCookieStore",
+  "rejectPublicSuffixes": true,
+  "cookies": [
+    {
+      "key": "myacinfo",
+      "value": "DAWTKNV323952cf8084a204fb20ab2508441a07d02d344d8c1fa71f28bb655672c6f6bef528ad1fb126ab919659dca2302d6a0866bd27e176a4f95f849ea63a4e5ebb0c0607549f2f2711d81591685443e343f1d963a33069fe46e6f83637c378a08a5193a51ab76fd06752f2e5db7242340bffd5ad6a4ea0cc0619eb757cda474c46346d21fa8f6486c352b90b6a16a008bdd1f4af3d6976f0aa0046daa313e803f8306bb508efa74e530f6631b3bd8d265372f35f235f7eb0160f99061a5caa3b5fceefff7f5f03fa5702346f5cb70c6256fc1b4e44aee7b31f7554554a24b92c6228d2a442ac8652e302888079dc97f5a55484c46b06c21b7ba26a86e7c61dc2064562a08b65e5af7640f686a7d696359a2696fdc2e6c3f5e2397ddc6c28bc8e753c56ddfc87de5843280b5b7b8a5ee0629b1b767a8bed4ffa5a481aae832782e8774912f9d149d070f7f73293c244edb53eef1ace57d70cf125f4b1a8192352c2319a5486ab92c919a1da6656425324d96dbe9bc3b935e31d8e40079947c61db64aa0127b50730d3d14e01ab1878bc7058bea556752c0f983a26e50ffc8f9d03d5bbb56e4fa593686ee643b2ba882f8ded20b789ffeafbb93e2d012cd2986f7562917479a5cc79d885c91a80008d455633801d6e08279b9e21606a8d18ec29df943382de6ab83fba36f569a7ae4ab6b41a0d8673e94d952d4faca07a8856cb5ba24f5d75d4826bfa68db0b24ad33448abb60fcf6edc4e7ec5d36fb32fa2cf40ada7046d690e59e3ec79771619f0a627fba1b39c376cfb025dcbc5eece07ea692fabc888effcf862ea46bb01d065b9e3224fdac827c5ce225ecf24e36bfd7e310c90d98bfb3d1a8583c11fd4b115467358842aa302db62b185e6a26f4af1dce0d7f141b5186c83df76bc9d4d2628a111b3330ee0189ad258c2961081d7f33282850dcd68af0df6fab33d46f7e151fe6caac63dd9b585a47V3",
+      "domain": "apple.com",
+      "path": "/",
+      "secure": true,
+      "httpOnly": true,
+      "hostOnly": false,
+      "creation": "2023-02-02T14:21:44.514Z",
+      "lastAccessed": "2023-02-02T15:31:48.695Z"
+    },
+    {
+      "key": "DES5ddffb39a254538bce51c6da441bc4875",
+      "value": "HSARMTKNSRVXWFlatfrpff724jQEA89xV6f1sJbxpLmHeQmI+xo2m52gxCT/NGdWMkW7uQZOzCY54SdKnpl9RjTQZNfkOXy/ny+LtcsjbnJR3h0nQLFUUDEF2sL8MLjy3qpMdNI4+nlIKuz7jePQ+2qJqTY7q/OdGwKwOSpqNszGeWnM7v8Ts1EJvLwXxxm42vhDkCWzvA//FWXffmthZaADmmltfRHUB83Kvw==SRVX",
+      "expires": "2023-03-04T14:21:44.000Z",
+      "maxAge": 2592000,
+      "domain": "idmsa.apple.com",
+      "path": "/",
+      "secure": true,
+      "httpOnly": true,
+      "hostOnly": false,
+      "creation": "2023-02-02T14:21:45.131Z",
+      "lastAccessed": "2023-02-02T14:21:45.131Z"
+    },
+    {
+      "key": "dqsid",
+      "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NzUzNTE5MDksImp0aSI6IkJJX2xuajc4SHZUWHlYaFBxdkoyU3cifQ.sKOQGuCd7201esCnmfimimlPQ5bEWCEG4E-xpAi0D2Q",
+      "expires": "2023-02-02T16:01:49.000Z",
+      "maxAge": 1800,
+      "domain": "appstoreconnect.apple.com",
+      "path": "/",
+      "secure": true,
+      "httpOnly": true,
+      "hostOnly": true,
+      "creation": "2023-02-02T15:31:49.522Z",
+      "lastAccessed": "2023-02-02T15:31:49.522Z"
+    }
+  ]
+}

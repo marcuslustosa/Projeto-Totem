@@ -1,0 +1,148 @@
+0 verbose cli /usr/bin/node /usr/bin/npm
+1 info using npm@8.19.3
+2 info using node@v16.19.0
+3 timing npm:load:whichnode Completed in 0ms
+4 timing config:load:defaults Completed in 2ms
+5 timing config:load:file:/usr/lib/node_modules/npm/npmrc Completed in 1ms
+6 timing config:load:builtin Completed in 2ms
+7 timing config:load:cli Completed in 1ms
+8 timing config:load:env Completed in 1ms
+9 timing config:load:file:/home/dev_m/.cache/typescript/4.9/.npmrc Completed in 0ms
+10 timing config:load:project Completed in 5ms
+11 timing config:load:file:/home/dev_m/.npmrc Completed in 0ms
+12 timing config:load:user Completed in 0ms
+13 timing config:load:file:/usr/etc/npmrc Completed in 0ms
+14 timing config:load:global Completed in 0ms
+15 timing config:load:validate Completed in 0ms
+16 timing config:load:credentials Completed in 1ms
+17 timing config:load:setEnvs Completed in 1ms
+18 timing config:load Completed in 13ms
+19 timing npm:load:configload Completed in 13ms
+20 timing npm:load:mkdirpcache Completed in 0ms
+21 timing npm:load:mkdirplogs Completed in 1ms
+22 verbose title npm install @types/alpinejs@ts4.9 @types/lodash@ts4.9 @types/postcss-import@ts4.9
+23 verbose argv "install" "--ignore-scripts" "@types/alpinejs@ts4.9" "@types/lodash@ts4.9" "@types/postcss-import@ts4.9" "--save-dev" "--user-agent" "typesInstaller/4.9.5"
+24 timing npm:load:setTitle Completed in 1ms
+25 timing config:load:flatten Completed in 2ms
+26 timing npm:load:display Completed in 2ms
+27 verbose logfile logs-max:10 dir:/home/dev_m/.npm/_logs
+28 verbose logfile /home/dev_m/.npm/_logs/2023-03-21T20_02_53_503Z-debug-0.log
+29 timing npm:load:logFile Completed in 3ms
+30 timing npm:load:timers Completed in 0ms
+31 timing npm:load:configScope Completed in 0ms
+32 timing npm:load Completed in 20ms
+33 timing arborist:ctor Completed in 0ms
+34 silly logfile start cleaning logs, removing 1 files
+35 silly logfile done cleaning log files
+36 timing idealTree:init Completed in 9ms
+37 timing arborist:ctor Completed in 0ms
+38 http fetch GET 200 https://registry.npmjs.org/@types%2fpostcss-import 106ms (cache miss)
+39 http fetch GET 200 https://registry.npmjs.org/@types%2flodash 121ms (cache updated)
+40 http fetch GET 200 https://registry.npmjs.org/@types%2falpinejs 1207ms (cache miss)
+41 timing idealTree:userRequests Completed in 1213ms
+42 silly idealTree buildDeps
+43 silly fetch manifest @types/postcss-import@14.0.0
+44 silly fetch manifest @types/lodash@4.14.191
+45 silly fetch manifest @types/alpinejs@3.7.1
+46 silly placeDep ROOT @types/alpinejs@3.7.1 OK for:  want: 3.7.1
+47 silly placeDep ROOT @types/lodash@4.14.191 OK for:  want: 4.14.191
+48 silly placeDep ROOT @types/postcss-import@14.0.0 OK for:  want: 14.0.0
+49 silly fetch manifest @vue/reactivity@^3.2.26
+50 silly fetch manifest postcss@^8.0.0
+51 http fetch GET 200 https://registry.npmjs.org/postcss 57ms (cache revalidated)
+52 http fetch GET 200 https://registry.npmjs.org/@vue%2freactivity 2024ms (cache miss)
+53 timing idealTree:#root Completed in 2049ms
+54 silly placeDep ROOT @vue/reactivity@3.2.47 OK for: @types/alpinejs@3.7.1 want: ^3.2.26
+55 silly fetch manifest @vue/shared@3.2.47
+56 http fetch GET 200 https://registry.npmjs.org/@vue%2fshared 86ms (cache miss)
+57 timing idealTree:node_modules/@types/alpinejs Completed in 90ms
+58 timing idealTree:node_modules/@types/lodash Completed in 0ms
+59 silly placeDep ROOT postcss@8.4.21 OK for: @types/postcss-import@14.0.0 want: ^8.0.0
+60 silly fetch manifest nanoid@^3.3.4
+61 silly fetch manifest picocolors@^1.0.0
+62 silly fetch manifest source-map-js@^1.0.2
+63 http fetch GET 200 https://registry.npmjs.org/source-map-js 39ms (cache revalidated)
+64 http fetch GET 200 https://registry.npmjs.org/nanoid 46ms (cache revalidated)
+65 http fetch GET 200 https://registry.npmjs.org/picocolors 50ms (cache revalidated)
+66 timing idealTree:node_modules/@types/postcss-import Completed in 55ms
+67 silly placeDep ROOT @vue/shared@3.2.47 OK for: @vue/reactivity@3.2.47 want: 3.2.47
+68 timing idealTree:node_modules/@vue/reactivity Completed in 1ms
+69 timing idealTree:node_modules/@vue/shared Completed in 0ms
+70 silly placeDep ROOT nanoid@3.3.4 OK for: postcss@8.4.21 want: ^3.3.4
+71 silly placeDep ROOT picocolors@1.0.0 OK for: postcss@8.4.21 want: ^1.0.0
+72 silly placeDep ROOT source-map-js@1.0.2 OK for: postcss@8.4.21 want: ^1.0.2
+73 timing idealTree:node_modules/postcss Completed in 5ms
+74 timing idealTree:node_modules/nanoid Completed in 0ms
+75 timing idealTree:node_modules/picocolors Completed in 0ms
+76 timing idealTree:node_modules/source-map-js Completed in 0ms
+77 timing idealTree:buildDeps Completed in 2202ms
+78 timing idealTree:fixDepFlags Completed in 0ms
+79 timing idealTree Completed in 3425ms
+80 timing reify:loadTrees Completed in 3427ms
+81 timing reify:diffTrees Completed in 1ms
+82 silly reify moves {}
+83 timing reify:retireShallow Completed in 2ms
+84 timing reify:createSparse Completed in 2ms
+85 timing reify:loadBundles Completed in 0ms
+86 silly audit bulk request {
+86 silly audit   'types-registry': [ '0.1.636' ],
+86 silly audit   '@types/alpinejs': [ '3.7.1' ],
+86 silly audit   '@types/lodash': [ '4.14.191' ],
+86 silly audit   '@types/postcss-import': [ '14.0.0' ],
+86 silly audit   '@vue/reactivity': [ '3.2.47' ],
+86 silly audit   postcss: [ '8.4.21' ],
+86 silly audit   '@vue/shared': [ '3.2.47' ],
+86 silly audit   nanoid: [ '3.3.4' ],
+86 silly audit   picocolors: [ '1.0.0' ],
+86 silly audit   'source-map-js': [ '1.0.2' ]
+86 silly audit }
+87 silly tarball no local data for source-map-js@https://registry.npmjs.org/source-map-js/-/source-map-js-1.0.2.tgz. Extracting by manifest.
+88 silly tarball no local data for @vue/shared@https://registry.npmjs.org/@vue/shared/-/shared-3.2.47.tgz. Extracting by manifest.
+89 silly tarball no local data for postcss@https://registry.npmjs.org/postcss/-/postcss-8.4.21.tgz. Extracting by manifest.
+90 silly tarball no local data for @types/postcss-import@https://registry.npmjs.org/@types/postcss-import/-/postcss-import-14.0.0.tgz. Extracting by manifest.
+91 silly tarball no local data for @vue/reactivity@https://registry.npmjs.org/@vue/reactivity/-/reactivity-3.2.47.tgz. Extracting by manifest.
+92 silly tarball no local data for @types/alpinejs@https://registry.npmjs.org/@types/alpinejs/-/alpinejs-3.7.1.tgz. Extracting by manifest.
+93 timing reifyNode:node_modules/picocolors Completed in 86ms
+94 timing reifyNode:node_modules/nanoid Completed in 100ms
+95 http fetch GET 200 https://registry.npmjs.org/source-map-js/-/source-map-js-1.0.2.tgz 92ms (cache miss)
+96 timing reifyNode:node_modules/source-map-js Completed in 102ms
+97 http fetch GET 200 https://registry.npmjs.org/postcss/-/postcss-8.4.21.tgz 145ms (cache miss)
+98 timing reifyNode:node_modules/postcss Completed in 157ms
+99 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 267ms
+100 timing auditReport:getReport Completed in 268ms
+101 silly audit report {}
+102 timing auditReport:init Completed in 0ms
+103 timing reify:audit Completed in 268ms
+104 http fetch GET 200 https://registry.npmjs.org/@vue/shared/-/shared-3.2.47.tgz 275ms (cache miss)
+105 timing reifyNode:node_modules/@vue/shared Completed in 288ms
+106 http fetch GET 200 https://registry.npmjs.org/@vue/reactivity/-/reactivity-3.2.47.tgz 307ms (cache miss)
+107 timing reifyNode:node_modules/@vue/reactivity Completed in 320ms
+108 timing reifyNode:node_modules/@types/lodash Completed in 397ms
+109 http fetch GET 200 https://registry.npmjs.org/@types/alpinejs/-/alpinejs-3.7.1.tgz 902ms (cache miss)
+110 timing reifyNode:node_modules/@types/alpinejs Completed in 916ms
+111 http fetch GET 200 https://registry.npmjs.org/@types/postcss-import/-/postcss-import-14.0.0.tgz 971ms (cache miss)
+112 timing reifyNode:node_modules/@types/postcss-import Completed in 983ms
+113 timing reify:unpack Completed in 983ms
+114 timing reify:unretire Completed in 0ms
+115 timing build:queue Completed in 2ms
+116 timing build:link:node_modules/nanoid Completed in 4ms
+117 timing build:link Completed in 4ms
+118 timing build:deps Completed in 6ms
+119 timing build Completed in 6ms
+120 timing reify:build Completed in 6ms
+121 timing reify:trash Completed in 0ms
+122 timing reify:save Completed in 11ms
+123 timing reify Completed in 4443ms
+124 silly ADD node_modules/source-map-js
+125 silly ADD node_modules/picocolors
+126 silly ADD node_modules/nanoid
+127 silly ADD node_modules/@vue/shared
+128 silly ADD node_modules/postcss
+129 silly ADD node_modules/@vue/reactivity
+130 silly ADD node_modules/@types/postcss-import
+131 silly ADD node_modules/@types/lodash
+132 silly ADD node_modules/@types/alpinejs
+133 timing command:install Completed in 4448ms
+134 verbose exit 0
+135 timing npm Completed in 4510ms
+136 info ok

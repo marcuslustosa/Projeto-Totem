@@ -1,0 +1,23 @@
+2023-02-06T16:34:24.091Z Error: You are on eas-cli@3.5.2 which does not satisfy the CLI version constraint in eas.json (3.5.1)
+2023-02-06T16:34:24.091Z     at applyCliConfigAsync (/mnt/c/Users/dev_m/AppData/Roaming/npm/node_modules/eas-cli/build/commandUtils/context/contextUtils/findProjectDirAndVerifyProjectSetupAsync.js:20:15)
+2023-02-06T16:34:24.091Z     at async findProjectDirAndVerifyProjectSetupAsync (/mnt/c/Users/dev_m/AppData/Roaming/npm/node_modules/eas-cli/build/commandUtils/context/contextUtils/findProjectDirAndVerifyProjectSetupAsync.js:98:5)
+2023-02-06T16:34:24.091Z     at async ProjectDirContextField.getValueAsync (/mnt/c/Users/dev_m/AppData/Roaming/npm/node_modules/eas-cli/build/commandUtils/context/ProjectDirContextField.js:8:16)
+2023-02-06T16:34:24.091Z     at async Build.getContextAsync (/mnt/c/Users/dev_m/AppData/Roaming/npm/node_modules/eas-cli/build/commandUtils/EasCommand.js:27:17)
+2023-02-06T16:34:24.091Z     at async Build.runAsync (/mnt/c/Users/dev_m/AppData/Roaming/npm/node_modules/eas-cli/build/commands/build/index.js:31:110)
+2023-02-06T16:34:24.091Z     at async Build._run (/mnt/c/Users/dev_m/AppData/Roaming/npm/node_modules/eas-cli/node_modules/@oclif/core/lib/command.js:80:22)
+2023-02-06T16:34:24.091Z     at async Config.runCommand (/mnt/c/Users/dev_m/AppData/Roaming/npm/node_modules/eas-cli/node_modules/@oclif/core/lib/config/config.js:272:25)
+2023-02-06T16:34:24.091Z     at async Object.run (/mnt/c/Users/dev_m/AppData/Roaming/npm/node_modules/eas-cli/node_modules/@oclif/core/lib/main.js:74:5)
+2023-02-06T16:41:06.623Z Error: npx exited with non-zero code: 1
+2023-02-06T16:41:06.623Z     at ChildProcess.completionListener (/mnt/c/Users/dev_m/AppData/Roaming/npm/node_modules/eas-cli/node_modules/@expo/spawn-async/build/spawnAsync.js:41:23)
+2023-02-06T16:41:06.623Z     at Object.onceWrapper (node:events:628:26)
+2023-02-06T16:41:06.623Z     at ChildProcess.emit (node:events:513:28)
+2023-02-06T16:41:06.623Z     ...
+2023-02-06T16:41:06.623Z     at spawnAsync (/mnt/c/Users/dev_m/AppData/Roaming/npm/node_modules/eas-cli/node_modules/@expo/spawn-async/build/spawnAsync.js:7:23)
+2023-02-06T16:41:06.623Z     at runLocalBuildAsync (/mnt/c/Users/dev_m/AppData/Roaming/npm/node_modules/eas-cli/build/build/local.js:43:56)
+2023-02-06T16:41:06.623Z     at async /mnt/c/Users/dev_m/AppData/Roaming/npm/node_modules/eas-cli/build/build/build.js:84:13
+2023-02-06T16:41:06.623Z     at async startBuildAsync (/mnt/c/Users/dev_m/AppData/Roaming/npm/node_modules/eas-cli/build/build/runBuildAndSubmit.js:204:12)
+2023-02-06T16:41:06.623Z     at async prepareAndStartBuildAsync (/mnt/c/Users/dev_m/AppData/Roaming/npm/node_modules/eas-cli/build/build/runBuildAndSubmit.js:190:19)
+2023-02-06T16:41:06.623Z     at async runBuildAndSubmitAsync (/mnt/c/Users/dev_m/AppData/Roaming/npm/node_modules/eas-cli/build/build/runBuildAndSubmit.js:69:49)
+2023-02-06T16:41:06.623Z     at async Build.runAsync (/mnt/c/Users/dev_m/AppData/Roaming/npm/node_modules/eas-cli/build/commands/build/index.js:41:9)
+2023-02-06T16:41:06.623Z     at async Build._run (/mnt/c/Users/dev_m/AppData/Roaming/npm/node_modules/eas-cli/node_modules/@oclif/core/lib/command.js:80:22)
+2023-02-06T16:41:06.623Z     at async Config.runCommand (/mnt/c/Users/dev_m/AppData/Roaming/npm/node_modules/eas-cli/node_modules/@oclif/core/lib/config/config.js:272:25)

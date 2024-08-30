@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Assistência Técnica - Linha Astec</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Rubik', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #009da5;
+            padding: 1px;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 100%;
+        }
+
+        header img {
+            max-width: 150px;
+            margin: 0;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px 0;
+        }
+
+        .info-text {
+            text-align: center;
+            font-size: 34px;
+            font-weight: bold;
+            width: 50%;
+            padding-right: 20px;
+        }
+
+        .disclaimer {
+            font-size: 21px;
+            color: #333;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .map-image {
+            width: 50%;
+        }
+
+        .map-image img {
+            width: 100%;
+            height: auto;
+            border: none;
+            border-radius: 0;
+        }
+
+        .product-section {
+            max-width: 1200px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .product-section h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .product {
+            flex: 1 1 18%;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .product img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .product h2 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 20px; /* Moved 10px further down */
+            left: 10px;
+            background-color: #009da5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 15px;
+            cursor: pointer;
+            font-size: 14px;
+            font-family: 'Rubik', sans-serif;
+        }
+
+        .back-button:hover {
+            background-color: #007a7d;
+        }
+
+        .header-line {
+            height: 1px;
+            background-color: #009da5;
+            margin-top: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Logo da Empresa">
+    </header>
+    <div class="header-line"></div>
+
+    <div class="content">
+        <div class="info-text">
+            Maior rede de assistência técnica do Brasil, presente em mais de 3660 cidades.
+            <div class="disclaimer">
+                Montagem cortesia, consulte as condições*
+            </div>
+        </div>
+        <div class="map-image">
+            <img src="images/mapa_assistencia.png" alt="Mapa de Assistência Técnica">
+        </div>
+    </div>
+
+    <div class="product-section">
+        <h1>Produtos</h1>
+        <div class="product-list">
+            <div class="product">
+                <img src="images/Molas-2.png" alt="Molas">
+                <h2>Molas</h2>
+            </div>
+            <div class="product">
+                <img src="images/alças.png" alt="Alças">
+                <h2>Alças</h2>
+            </div>
+            <div class="product">
+                <img src="images/Estofados-3.png" alt="Estofados">
+                <h2>Estofados</h2>
+            </div>
+            <div class="product">
+                <img src="images/acessorios.png" alt="Acessórios">
+                <h2>Acessórios</h2>
+            </div>
+            <div class="product">
+                <img src="images/peças-reposição-astec.png" alt="Peças de reposição">
+                <h2>Peças de reposição</h2>
+            </div>
+        </div>
+    </div>
+
+    <button class="back-button" onclick="goBack()">Voltar</button>
+
+    <script>
+        function goBack() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

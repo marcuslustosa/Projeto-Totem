@@ -1,0 +1,45 @@
+{
+  "cli": {
+    "version": ">=3.0.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "preview": {
+      "android": {
+        "gradleCommand": ":app:assembleRelease",
+        "buildType": "apk"        
+      }
+    },
+    "debug": {
+      "android": {
+        "gradleCommand": ":app:assembleDebug ",
+        "buildType": "apk",
+        "developmentClient": true
+      }
+    },
+    
+    "development": {
+      "developmentClient": true,
+      "channel": "development",
+      "distribution": "internal",
+      "android": {
+        "gradleCommand": ":app:assembleRelease",
+        "buildType": "apk"        
+      },
+      "ios": {
+        "resourceClass": "m1-medium"
+        
+        
+      }
+    },
+    "production": {
+      "autoIncrement": false,
+      "channel": "production",      
+      "ios": {
+        "resourceClass": "m1-medium",
+        "image": "macos-monterey-12.6-xcode-14.1"
+        
+      }
+    }
+  }
+}
